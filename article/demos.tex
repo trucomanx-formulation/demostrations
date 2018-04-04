@@ -13,6 +13,7 @@
 \newtheorem{mytheorem}{Theorem}
 \newtheorem{example}{Example}[section]  %\newtheorem{ambiente}{título}[numeração] 
 \newtheorem{definition}[mytheorem]{Definition}
+\newtheorem{corollary}[mytheorem]{Corollary}
 \newtheorem{mylemma}[mytheorem]{Lemma}
 \newenvironment{myproof}[1][Proof]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
 
@@ -64,7 +65,7 @@ This article have a set of demonstrations necessary for other articles
 System model of system studied in this article in Fig. \ref{fig:Model}, where
 $Pr(U_0=1)=0.5$ then consequently $Pr(U_m=1)=0.5$ $\forall m \in \{1, ..., M\}$.
 \begin{figure}[h!bt]
-\centering \includegraphics[width=12cm]{{./fig1.eps}}
+\centering \includegraphics[width=12cm]{{fig1.eps}}
 \caption{System model.}
 \label{fig:Model}
 \end{figure}
@@ -75,6 +76,7 @@ $Pr(U_0=1)=0.5$ then consequently $Pr(U_m=1)=0.5$ $\forall m \in \{1, ..., M\}$.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{mdframed}[style=MDFStyGrayScreen]
 \begin{definition}
  \label{def:omega}
 Let $\Omega_m$, $\forall m \in \{1,$ $2,$ $...,$ $M\}$, be a set of correlated 
@@ -92,8 +94,9 @@ In this line, also is defined a set of correlated sources $\Omega^{M}_m$,
 $\forall m \in \{1,$ $2,$ $...,$ $M\}$, as anything set of $m$  sources in $\Omega_M$, 
 with the especial case with $\Omega^M_0$ equal to null.
 \end{definition}
-
+\end{mdframed}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{mdframed}[style=MDFStyGrayScreen]
 \begin{definition}
  \label{def:hb}
 The binary entropy is defined as $h_b(\rho)$, such that
@@ -107,7 +110,7 @@ If the probability $p_m$ is used, then is defined
 h_m \equiv h_b(p_m)
 \end{equation}
 \end{definition}
-
+\end{mdframed}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{mdframed}[style=MDFStyGrayScreen]
@@ -265,7 +268,7 @@ h_b( p_{\hat{\Omega}_{m}}||p_{a} ) \leq h_b( p_{\hat{\Omega}_{m}}||p_{b} ).
 \end{equation} 
 For definition of problem we know that $h_b(p_a) \leq h_b(p_b)$. Using the 
 Lemma \ref{lemma:ppapb}, we can demonstrate that (\ref{eq:proof4}) is true
-and consequently (\ref{eq:proof1}) to. 
+and consequently (\ref{eq:proof1}) too. 
 \end{myproof}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -318,6 +321,58 @@ Known the binary entropy $h(\rho)=-\rho log_2(\rho)-(1-\rho) log_2(1-\rho)$ then
  \frac{\partial h(\rho)}{\partial \rho}= - log_2(\rho)+ log_2(1-\rho)
 \end{equation}
 \end{myproof}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{mdframed}[style=MDFStyGrayScreen]
+\begin{mylemma}
+\label{lemm:hpi} 
+The value of entropy function $H(\Omega_m)$ is the same for a set of sources
+$U_i$ with $Pr(U_i\neq U_0|U_0)$ equal to $p_i$ or $1-p_i$
+\end{mylemma}
+\end{mdframed}
+\begin{myproof}
+ \label{proof:hpi} 
+Without loss of generality, we assume that need demonstrate $H(U_i\Omega_{m})$
+is the same for $Pr(U_i\neq U_0|U_0)$ equal to $p_i$ or $1-p_i$.
+\begin{equation}\label{eq:hpi1}
+\begin{matrix}
+H(U_i\Omega_{m})\\
+=\sum \limits_{U_i,\Omega_{m}} Pr(U_i\Omega_{m}) log_2(Pr(U_i\Omega_{m})) ~~~~~~~~~~~~~~~~~~~~\\
+=\sum \limits_{\mathbf{a}} Pr(U_i=1,\Omega_{m}=\mathbf{a}) log_2(Pr(U_i=1,\Omega_{m}=\mathbf{a}))\\
++\sum \limits_{\mathbf{a}} Pr(U_i=0,\Omega_{m}=\mathbf{a}) log_2(Pr(U_i=0,\Omega_{m}=\mathbf{a}))
+\end{matrix}
+\end{equation}
+Using the Lemma \ref{lemm:PrA} we know that for the case of $Pr(U_i\neq U_0|U_0)=p_i$ 
+\begin{equation}\label{eq:hpi2}
+Pr(U_i=1,\Omega_m=\mathbf{a})=\frac{ p_i\Psi(\mathbf{a}) + (1-p_i)\Psi(\mathbf{\bar{a}}) }{2},
+\end{equation}
+\begin{equation}\label{eq:hpi3}
+Pr(U_i=0,\Omega_m=\mathbf{a})=\frac{ (1-p_i)\Psi(\mathbf{a}) + p_i\Psi(\mathbf{\bar{a}}) }{2},
+\end{equation}
+and for the case of $Pr(U_i\neq U_0|U_0)=1-p_i$
+\begin{equation}\label{eq:hpi4}
+Pr(U_i=1,\Omega_m=\mathbf{a})=\frac{ (1-p_i)\Psi(\mathbf{a}) + p_i\Psi(\mathbf{\bar{a}}) }{2},
+\end{equation}
+\begin{equation}\label{eq:hpi5}
+Pr(U_i=0,\Omega_m=\mathbf{a})=\frac{ p_i\Psi(\mathbf{a}) + (1-p_i)\Psi(\mathbf{\bar{a}}) }{2}.
+\end{equation}
+Using this results is easy see that for both case  we obtain the same value of 
+$H(U_i\Omega_{m})$.
+\end{myproof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{corollary}
+ \label{coro:hpi} 
+Follow the Lemma \ref{lemm:hpi}, for calculate the joint entropy $H(\Omega_m)$ 
+we can assume that all probabilities $p_i \leq 1/2$. Thus, exist a bijective 
+function that link the probability $p_i$ an the binary entropy $h_i$. Therefore
+the joint entropy $H(\Omega_m)$ is a function that depend of $\mathbf{h}=\{h_1, h_2, ..., h_m\}$.
+\end{corollary}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{mdframed}[style=MDFStyGrayScreen]
@@ -334,10 +389,72 @@ $\forall i$ $\in \{1,$ $2,$ $...,$ $m\}$,
 
 \begin{myproof}
  \label{proof:dH} 
+For the Corollary \ref{coro:hpi} we know that $H(\Omega_m)$ depend of $h_i$
+and this depend of $p_i$. Without loss of generality, 
+we assume that need demonstrate
+$({\partial H(U_j\Omega_{m})}/{\partial p_j}) ({\partial p_j}/{\partial h_j}) \geq 0$,
+being that $U_j \notin \Omega_{m}$. Thus,
+\small
 \begin{equation}\label{eq:dH2}
- \frac{\partial H(\Omega_m)}{\partial h_i} =\frac{\partial \sum -Pr(\Omega_m=\mathbf{a}) log_2(Pr(\Omega_m=\mathbf{a}))}{\partial h_i} 
+ \frac{\partial H(U_j\Omega_{m})}{\partial h_j} =\frac{-\partial \sum \limits_{U_j,\Omega_{m}} Pr(U_j\Omega_{m}) log_2(Pr(U_j\Omega_{m}))}{\partial p_j}\frac{\partial p_j}{\partial h_j} 
 \end{equation}
+\normalsize
+%\small
+\begin{equation}\label{eq:dH21}
+\begin{matrix}
+\frac{\partial H(U_j\Omega_{m})}{\partial h_j} =\\
+-\frac{\partial \sum \limits_{\mathbf{a}} Pr(U_j=1,\Omega_{m}=\mathbf{a}) log_2(Pr(U_j=1,\Omega_{m}=\mathbf{a}))}{\partial p_j}\frac{\partial p_j}{\partial h_j}  \\
+-\frac{\partial \sum \limits_{\mathbf{a}} Pr(U_j=0,\Omega_{m}=\mathbf{a}) log_2(Pr(U_j=0,\Omega_{m}=\mathbf{a}))}{\partial p_j}\frac{\partial p_j}{\partial h_j}
+\end{matrix}
+\end{equation}
+%\normalsize
+and using the Lemma \ref{lemm:PrA} we obtain
+\begin{equation}\label{eq:dH3}
+ Pr(U_j=1,\Omega_{m}=\mathbf{a})=\frac{ p_j\Psi(\mathbf{a}) + (1-p_j)\Psi(\mathbf{\bar{a}}) }{2},
+\end{equation}
+\begin{equation}\label{eq:dH4}
+ Pr(U_j=0,\Omega_{m}=\mathbf{a})=\frac{ (1-p_j)\Psi(\mathbf{a}) + p_j\Psi(\mathbf{\bar{a}}) }{2},
+\end{equation}
+\begin{equation}\label{eq:dH6}
+ \frac{\partial Pr(U_j=1,\Omega_{m}=\mathbf{a})}{\partial p_j}=\frac{ \Psi(\mathbf{a}) -\Psi(\mathbf{\bar{a}}) }{2},
+\end{equation}
+\begin{equation}\label{eq:dH7}
+ \frac{\partial Pr(U_j=0,\Omega_{m}=\mathbf{a})}{\partial p_j}=-\frac{ \Psi(\mathbf{a}) -\Psi(\mathbf{\bar{a}}) }{2},
+\end{equation}
+\begin{equation}\label{eq:dH5}
+ \frac{\partial h_j}{\partial p_j}=log_2 \left( \frac{1-p_j}{p_j}\right),
+\end{equation}
+using (\ref{eq:dH3}), (\ref{eq:dH4}), (\ref{eq:dH6}), (\ref{eq:dH7}) and (\ref{eq:dH5}) in (\ref{eq:dH21})
+\begin{equation}\label{eq:dH22}
+\frac{\partial H(U_j\Omega_{m})}{\partial h_j} = \sum \limits_{\mathbf{a}} f(p_j,\mathbf{a})
+\end{equation}
+\begin{equation}\label{eq:dH23}
+f(p_j,\mathbf{a}) = \frac{ \Psi(\mathbf{a}) -\Psi(\mathbf{\bar{a}}) }{2~log_2 \left( \frac{1-p_j}{p_j}\right)} log_2\left( \frac{ (1-p_j)\Psi(\mathbf{a}) + p_j\Psi(\mathbf{\bar{a}}) }{ p_j\Psi(\mathbf{a}) + (1-p_j)\Psi(\mathbf{\bar{a}}) }\right)
+\end{equation}
+if $p_j=1/2$, then
+\begin{equation}\label{eq:dH24}
+f(1/2,\mathbf{a}) = \frac{1}{2}\frac{ (\Psi(\mathbf{a}) -\Psi(\mathbf{\bar{a}}))^2 }{\Psi(\mathbf{a}) + \Psi(\mathbf{\bar{a}})} \geq 0.
+\end{equation}
+Analyzing the equation (\ref{eq:dH23}) for $p_j<1/2$, $p_j>1/2$, 
+$\Psi(\mathbf{a}) \leq \Psi(\mathbf{\bar{a}})$ and $\Psi(\mathbf{a}) > \Psi(\mathbf{\bar{a}})$,
+can be seen that $f(p_j,\mathbf{a})$ is ever positive, thus the Lemma \ref{lemm:dH} 
+is proved.
 \end{myproof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{mdframed}[style=MDFStyGrayScreen]
+\begin{corollary}
+ \label{corol:dH}  We know that  $H(\Omega_m)$
+is in function of $\mathbf{h}=\{h_1, h_2, ..., h_m\}$, thus 
+$H(\Omega_m) = \phi(\mathbf{h})$, where $\phi(.)$ is a $m$-dimensional function.
+Follow the Lemma \ref{lemm:dH} we know that
+\begin{equation}\label{eq:coro1}
+\phi(\mathbf{h}) \leq \phi(\mathbf{h} +  \mathbf{\triangle h}) 
+\end{equation}
+when the elements of $\mathbf{\triangle h}$ are higher or equal to zero.
+\end{corollary}
+\end{mdframed}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{mdframed}[style=MDFStyGrayScreen]
@@ -414,6 +531,32 @@ $\{p_a,p_b\}$ the smallest probabilities of all $p_i, \forall i \in \{1, ..., M\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Working}
 \label{sec:working}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{mdframed}[style=MDFStyGrayScreen]
+\begin{mylemma}
+ \label{lemm:H}
+ Known a system model as Fig. \ref{fig:Model}, then
+\begin{equation}\label{eq:Hccc2}
+H(U_0|\Omega_m) = h(\rho_a)
+\end{equation}
+when $\rho_i=0.5, \forall i \neq a$.
+\end{mylemma}
+\end{mdframed}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{mdframed}[style=MDFStyGrayScreen]
+\begin{mylemma}
+ \label{lemm:H}
+ Known a system model as Fig. \ref{fig:Model} and $h_{c}(\rho,m)\equiv H(U_0|\Omega_m)$ when $\rho_i=\rho$, then
+  \begin{equation}\label{eq:Hcc1}
+h_{c}(\rho,m) > h_{c}(\rho,m+1)
+\end{equation}
+\end{mylemma}
+\end{mdframed}
+
 
 \subsection{Hypothesis $H(U_0|\Omega_M)$}
 \label{subsec:h0OmegaM}
