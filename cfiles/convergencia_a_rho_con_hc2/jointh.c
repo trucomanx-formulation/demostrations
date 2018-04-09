@@ -32,73 +32,44 @@
 
 int main(int argc, char** argv)
 {
-	double Hjoint;
-	double Hjoint2;
 	double Hcond;
-	double Hcond2;
 	double rho;
-	double rho0;
-	int i,N;
+	int i;
 
 	PdsVector  *Ps=NULL;
-	PdsBVector *B =NULL;
+
 	double p0=0.15;
-	double p,S,h;
-	int M=3;
-	PdsBaNatural n;
+	int M=8;
 
 	Ps=pds_vector_new(M);
-	B =pds_bvector_new(M);
 	
 	for(i=0;i<M;i++)
 	{
-		pds_vector_set_value (Ps, (PdsRaNatural)i,p0);//+i/(4.0*M));
+		pds_vector_set_value (Ps, (PdsRaNatural)i,p0+i/(4.0*M));
 	}
 	printf("\nPS:\n");
 	pds_vector_printf(Ps);
 	printf("\n");
 
-	////////////////////////////////////////////////////////////////////////////
-	pds_symetric_entropy_u0_omega_bsc_model (p0,M,&Hcond);
-	printf("H(U0|Omega) :\t%f\n",Hcond);
-	////////////////////////////////////////////////////////////////////////////
-
 
 	////////////////////////////////////////////////////////////////////////////
 	Hcond=0;
 	pds_entropy_u0_omega_bsc_model(Ps,0.5,&Hcond);
-	printf("H(U0|Omega) :\t%f\n",Hcond);
+	printf("H(U0|Omega)        : %f\n",Hcond);
 	////////////////////////////////////////////////////////////////////////////
 
 
 	////////////////////////////////////////////////////////////////////////////
-	N=(int)pow(2,M);
-	S=0;
-	for(i=0;i<N;i++)
-	{
-		pds_bvector_set_natural(B,i);		//pds_bvector_printf(B);
-		pds_bvector_weight_bvector(B,&n);	//printf("%d\n",n);
-	
-		p=0;
-		probabilidad(B,Ps,&p);				//printf("%f\n\n",p);
-		h=pds_hb(p);						//printf("%f\n\n",h);
-
-		S=S+pow(-1,n+1)*h;
-	}
-	printf("H(U0|Omega) :\t%f\n",S);
+    pds_inv_symetric_entropy_u0_omega_bsc_model(Hcond,M,&rho);
+    pds_symetric_entropy_u0_omega_bsc_model(rho,M,&Hcond);
+	printf("h_C(%e,M)~ %f\n",rho,Hcond);
 	////////////////////////////////////////////////////////////////////////////
 
 	////////////////////////////////////////////////////////////////////////////
 	Hcond=0;
+    printf("\n");
 	entropia_metodo1(Ps,&Hcond);
-	printf("H(U0|Omega) :\t%f\n",Hcond);
-	////////////////////////////////////////////////////////////////////////////
-
-
-	////////////////////////////////////////////////////////////////////////////
-	Hcond=0;
-	pds_joint_entropy_bsc_model(Ps,0.5,&Hcond);
-	printf("H(Omega) :\t%f\n",Hcond);
+	printf("H(U0|Omega)        ~ %f [metodo]\n",Hcond);
 	////////////////////////////////////////////////////////////////////////////
 
 	printf("\n");

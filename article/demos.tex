@@ -695,7 +695,7 @@ where $P_e=P(X \neq {\tilde {X}})$.
 \label{sec:working}
 
 
-\subsection{Experimentalmente corroborado $H(U_0|\Omega_M)$ (conjetura o postulado)}
+\subsection{Experimentalmente corroborado $H(U_0|\Omega_M)$ (conjetura de la potencia $h_b$)}
 \label{subsec:h0OmegaM_2}
 
 
@@ -711,8 +711,7 @@ h_{C}(\rho,m)  \stackrel{m \rightarrow \infty }{=} h(\rho)^{f(\rho)~m+g(\rho)}
 \end{conjecture}
 \end{mdframed}
 
-
-\subsection{Hypothesis $H(U_0|\Omega_M)$}
+\subsection{Hypothesis sin testar $H(U_0|\Omega_M)$}
 \label{subsec:h0OmegaM}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -734,6 +733,40 @@ experimentally that
 \begin{myproof}
 Them
 \end{myproof}
+
+\section{Hipotesis fracasadas $H(U_0|\Omega_M)$ }
+\label{subsec:h0OmegaM_2}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{mdframed}[style=MDFStyGrayScreen]
+\begin{conjecture}[Convergencia a $\rho$ con $h_c(\rho_1,\rho_2)$ iterativo]
+ \label{lemm:h0OmegaM_hc2}
+ Known a system model as Fig. \ref{fig:Model} and $h_{C}(\rho,M)\equiv H(U_0|\Omega_M)$ 
+ when $\rho_m=\rho$, $\forall m \in $ $\{1,$ $2,$ $\dots,$ $M\}$.
+ 
+ Then to each $i=\{1,$ $2,$ $3,$ $\dots,$ $M/2\}$
+\begin{equation}\label{eq:HconjectureHc2_1}
+H \leftarrow h_c(\rho_{i},\rho_{M-i+1})
+\end{equation}
+\begin{equation}\label{eq:HconjectureHc2_2}
+H \rightarrow h_c(\rho,2)
+\end{equation}
+\begin{equation}\label{eq:HconjectureHc2_3}
+\rho_{i} \leftarrow \rho ~~\wedge~~ \rho_{M-i+1} \leftarrow \rho .
+\end{equation}
+
+Later
+\begin{equation}\label{eq:HconjectureHc2_3}
+\rho_{:} \leftarrow order\_ascending(\rho_{:})
+\end{equation}
+
+and repeat until that $\rho_m$ be equals.
+\end{conjecture}
+\end{mdframed}
+
+
 
 
 \begin{thebibliography}{99}
