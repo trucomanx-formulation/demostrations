@@ -38,8 +38,8 @@ int main(int argc, char** argv)
 
 	PdsVector  *Ps=NULL;
 
-	double p0=0.15;
-	int M=8;
+	double p0=0.05;
+	int M=20;
 
 	Ps=pds_vector_new(M);
 	
@@ -55,21 +55,22 @@ int main(int argc, char** argv)
 	////////////////////////////////////////////////////////////////////////////
 	Hcond=0;
 	pds_entropy_u0_omega_bsc_model(Ps,0.5,&Hcond);
-	printf("H(U0|Omega)        : %f\n",Hcond);
+	printf("H(U0|Omega)        : %e\n",Hcond);
 	////////////////////////////////////////////////////////////////////////////
 
 
 	////////////////////////////////////////////////////////////////////////////
     pds_inv_symetric_entropy_u0_omega_bsc_model(Hcond,M,&rho);
     pds_symetric_entropy_u0_omega_bsc_model(rho,M,&Hcond);
-	printf("h_C(%e,M)~ %f\n",rho,Hcond);
+	printf("h_C(%e,M)~ %e\n",rho,Hcond);
 	////////////////////////////////////////////////////////////////////////////
 
 	////////////////////////////////////////////////////////////////////////////
-	Hcond=0;
+	rho=0;
     printf("\n");
-	entropia_metodo1(Ps,&Hcond);
-	printf("H(U0|Omega)        ~ %f [metodo]\n",Hcond);
+	entropia_metodo1(Ps,&rho);
+    pds_symetric_entropy_u0_omega_bsc_model(rho,M,&Hcond);
+	printf("h_C(%e,M)~ %e [metodo]\n",rho,Hcond);
 	////////////////////////////////////////////////////////////////////////////
 
 	printf("\n");

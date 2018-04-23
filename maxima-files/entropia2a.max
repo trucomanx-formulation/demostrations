@@ -1,0 +1,9 @@
+
+gradef(h(p,m), h(p,m+1)) ;
+
+print ("Derivada D", 1);
+M:10;
+hM:diff(-h(p+p-2*p*p,0),p,M);
+hMe:ev(hM,p=1/2)/4^(M/2);
+
+

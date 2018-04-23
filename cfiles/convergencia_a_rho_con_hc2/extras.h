@@ -1,13 +1,13 @@
 
 
-int entropia_metodo1(const PdsVector *V, double *val)
+int entropia_metodo1(const PdsVector *V, double *rho)
 {
 	double h0,p0;
 	int j,i,N=V->Nel;
 
     PdsVector *v=pds_vector_new_vector(V);
-    pds_vector_printf(v);
-    for(j=0;j<4*N;j++)
+    //pds_vector_printf(v);
+    for(j=0;j<(2*log2(N));j++)
     {
 	    for(i=0;i<round(N/2.0);i++)
 	    {   //printf("[%d,%d-%d]\n",i,N,i);
@@ -21,8 +21,13 @@ int entropia_metodo1(const PdsVector *V, double *val)
         //printf("ORD: ");pds_vector_printf(v);
         //printf("\n");
     }
-    pds_vector_printf(v);
+    //pds_vector_printf(v);
+    PdsRaReal m;
+    pds_vector_mean_vector (v,&m);
+	*rho=m;
+    printf("E[rho]=%e\t",m);
+    pds_vector_std_vector (v,&m);
+    printf("Sigma[rho]=%e\n",m);
     pds_vector_free(v);
-	*val=h0;
     return TRUE;
 }

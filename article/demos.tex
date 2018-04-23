@@ -101,15 +101,15 @@ with the especial case with $\Omega^M_0$ equal to null.
 \begin{mdframed}[style=MDFStyGrayScreen]
 \begin{definition}
  \label{def:hb}
-The binary entropy is defined as $h_b(\rho)$, such that
+The binary entropy is defined as $h_{b}(\rho)$, such that
 \begin{equation}
 \label{eq:hb1}
-h_b(\rho)=- \rho ~ log_2(\rho) - (1-\rho) ~ log_2(1-\rho).
+h_{b}(\rho)=- \rho ~ log_2(\rho) - (1-\rho) ~ log_2(1-\rho).
 \end{equation}
 If the probability $p_m$ is used, then is defined
 \begin{equation}
 \label{eq:hi}
-h_m \equiv h_b(p_m)
+h_m \equiv h_{b}(p_m)
 \end{equation}
 \end{definition}
 \end{mdframed}
@@ -147,7 +147,7 @@ the Lemma \ref{lemma:def} is proved.
 Known 2 probabilities $p_1$, and $p2$
 them is true that
 \begin{equation} \label{eq:psimple1}
-h_b(p_1) \leq h_b(p_1||p_2) 
+h_{b}(p_1) \leq h_{b}(p_1||p_2) 
 \end{equation}
 \end{mylemma}
 \end{mdframed}
@@ -158,15 +158,15 @@ is true that
 \begin{equation} \label{eq:psimple2}
 (1-\lambda) f(p_1) +\lambda f(1-p_1)  \leq f((1-\lambda) p_1 +\lambda (1-p_1))
 \end{equation}
-replacing the function $f(.)$ by the concave function $h_b(.)$ and $\lambda$ 
+replacing the function $f(.)$ by the concave function $h_{b}(.)$ and $\lambda$ 
 by $p_2$ we obtain
 \begin{equation} \label{eq:psimple3}
-h_b(p_1)  \leq h_b(p_2 + p_1 - 2 p_1 p_2)
+h_{b}(p_1)  \leq h_{b}(p_2 + p_1 - 2 p_1 p_2)
 \end{equation}
 and the lemma is proved.
 %and finally
 %\begin{equation} \label{eq:psimple4}
-%h_b(p_1)  \leq h_b(p_1|| p_2).
+%h_{b}(p_1)  \leq h_{b}(p_1|| p_2).
 %\end{equation}
 \end{myproof}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -176,11 +176,11 @@ and the lemma is proved.
 \label{lemma:ppapb} 
 Known 3 probabilities $p_a$, $p_b$ and $p$, where
 \begin{equation} \label{eq:ppapb0}
-h_b(p_a) \leq h_b(p_b) 
+h_{b}(p_a) \leq h_{b}(p_b) 
 \end{equation}
 them is true that
 \begin{equation} \label{eq:ppapb1}
-h_b(p||p_a) \leq h_b(p||p_b) 
+h_{b}(p||p_a) \leq h_{b}(p||p_b) 
 \end{equation}
 \end{mylemma}
 \end{mdframed}
@@ -190,7 +190,7 @@ h_b(p||p_a) \leq h_b(p||p_b)
 Using the Lemma \ref{lemma:def} and \ref{lemma:psimple}, and replacing 
 $p_1$ by $p || p_a$, the equation (\ref{eq:psimple1}) can be rewrite as 
 \begin{equation} \label{eq:ps1}
-h_b(p || p_a) \leq h_b(p|| (p_a||p_2)).
+h_{b}(p || p_a) \leq h_{b}(p|| (p_a||p_2)).
 \end{equation}
 If we call to $p_a||p_2$ as $p_b$, and it is replace in (\ref{eq:ps1}) we obtain
 the same equation that in (\ref{eq:ppapb1}) and the lemma is proved.
@@ -241,7 +241,7 @@ $Pr(U_b=1|U_a=1)=P_a || P_b$. Thus, the Lemma \ref{lemma:twoparbsc} is proved.
 \label{lemma:minimo}
 We consider that have $\hat{\Omega}_{m}$ as a set of sources that pertain 
 $\Omega_M$, also $U_{a}$ and $U_b$, $\forall b \geq {a}$, are sources that 
-pertain to $\Omega_M$ but not to $\hat{\Omega}_{m}$, such that $ h_b(p_a) \leq h_b(p_b)$
+pertain to $\Omega_M$ but not to $\hat{\Omega}_{m}$, such that $ h_{b}(p_a) \leq h_{b}(p_b)$
 then
 \begin{equation}\label{eq:proof1}
  H(\hat{\Omega}_{m} U_{a} ) \leq H(\hat{\Omega}_{m} U_b ),
@@ -266,9 +266,9 @@ $\hat{\Omega}_{m}$. Thus, the equation (\ref{eq:proof2}) can be rewrite as
 \end{equation} 
 Using the Lemma \ref{lemma:twoparbsc} the last equation can be rewrite as
 \begin{equation}\label{eq:proof4}
-h_b( p_{\hat{\Omega}_{m}}||p_{a} ) \leq h_b( p_{\hat{\Omega}_{m}}||p_{b} ).
+h_{b}( p_{\hat{\Omega}_{m}}||p_{a} ) \leq h_{b}( p_{\hat{\Omega}_{m}}||p_{b} ).
 \end{equation} 
-For definition of problem we know that $h_b(p_a) \leq h_b(p_b)$. Using the 
+For definition of problem we know that $h_{b}(p_a) \leq h_{b}(p_b)$. Using the 
 Lemma \ref{lemma:ppapb}, we can demonstrate that (\ref{eq:proof4}) is true
 and consequently (\ref{eq:proof1}) too. 
 \end{myproof}
@@ -310,9 +310,9 @@ Pr(\Omega_m=\mathbf{a})=\frac{\prod \limits_{U_i\in \Omega_m}{Pr(U_i=a_i|U_0=0)}
 \begin{mdframed}[style=MDFStyGrayScreen]
 \begin{mylemma}
  \label{lemm:dhdrho}
-Known the binary entropy $h(\rho)=-\rho log_2(\rho)-(1-\rho) log_2(1-\rho)$ then
+Known the binary entropy $h_{b}(\rho)=-\rho log_2(\rho)-(1-\rho) log_2(1-\rho)$ then
 \begin{equation}\label{eq:dhdrho1}
- \frac{\partial h(\rho)}{\partial \rho}= log_2 \left( \frac{1-\rho}{\rho} \right )
+ \frac{\partial h_{b}(\rho)}{\partial \rho}= log_2 \left( \frac{1-\rho}{\rho} \right )
 \end{equation}
 \end{mylemma}
 \end{mdframed}
@@ -320,7 +320,7 @@ Known the binary entropy $h(\rho)=-\rho log_2(\rho)-(1-\rho) log_2(1-\rho)$ then
 \begin{myproof}
  \label{proof:dhdrho} 
 \begin{equation}\label{eq:dhdrho2}
- \frac{\partial h(\rho)}{\partial \rho}= - log_2(\rho)+ log_2(1-\rho)
+ \frac{\partial h_{b}(\rho)}{\partial \rho}= - log_2(\rho)+ log_2(1-\rho)
 \end{equation}
 \end{myproof}
 
@@ -370,7 +370,7 @@ $H(U_i\Omega_{m})$.
  \label{coro:hpi} 
 Follow the Lemma \ref{lemm:hpi}, for calculate the joint entropy $H(\Omega_m)$ 
 we can assume that all probabilities $p_i \leq 1/2$. Thus, exist a bijective 
-function that link the probability $p_i$ an the binary entropy $h_i$. Therefore
+function that link the probability $p_i$ an the binary entropy $h_i\equiv h_{b}(p_i)$. Therefore
 the joint entropy $H(\Omega_m)$ is a function that depend of $\mathbf{h}=\{h_1, h_2, ..., h_m\}$.
 \end{corollary}
 
@@ -381,7 +381,7 @@ the joint entropy $H(\Omega_m)$ is a function that depend of $\mathbf{h}=\{h_1, 
 \begin{mylemma}
  \label{lemm:dH}
 Known a set of $m$ correlated  sources  $\Omega_m$. Then, is true that
-the value of entropy $H(\Omega_m)$ grow in relation growing of $h_b(p_i)$, 
+the value of entropy $H(\Omega_m)$ grow in relation growing of $h_i \equiv h_{b}(p_i)$, 
 $\forall i$ $\in \{1,$ $2,$ $...,$ $m\}$,
 \begin{equation}\label{eq:dH1}
  \frac{\partial H(\Omega_m)}{\partial h_i} \geq 0
@@ -464,7 +464,7 @@ when the elements of $\mathbf{\triangle h}$ are higher or equal to zero.
  \label{lemm:H}
  Known a system model as Fig. \ref{fig:Model}, then
   \begin{equation}\label{eq:H}
-H(\Omega_m) = \sum_{i=1}^{m}{h_b(p_i)}+1-H(U_0|\Omega_m).
+H(\Omega_m) = \sum_{i=1}^{m}{h_{b}(p_i)}+1-H(U_0|\Omega_m).
 \end{equation}
 \end{mylemma}
 \end{mdframed}
@@ -493,7 +493,7 @@ H(\Omega_m) = \sum_{i=1}^{m}{H(U_i|U_0)}+1-H(U_0|\Omega_m)
  \label{lemm:Hin}
  Known a system model as Fig. \ref{fig:Model} with $Pr(U_0=1)=0.5$. Then is true that
   \begin{equation}\label{eq:Hin}
-\sum_{i=1}^{M}{h_b(p_i)}+1-h_b(p_a) \leq H(\Omega_m) \leq \sum_{i=1}^{M}{h_b(p_i)}+1.
+\sum_{i=1}^{M}{h_{b}(p_i)}+1-h_{b}(p_a) \leq H(\Omega_m) \leq \sum_{i=1}^{M}{h_{b}(p_i)}+1.
 \end{equation}
 \end{mylemma}
 \end{mdframed}
@@ -510,24 +510,24 @@ H(\Omega_m) = \sum_{i=1}^{m}{H(U_i|U_0)}+1-H(U_0|\Omega_m)
 \end{equation}
 $\forall a,b \in \{1, ..., M\}$, and the Lemma \ref{lemm:H} them is true that
 \begin{equation}\label{eq:Hin2}
- \sum_{i=1}^{M}{h_b(p_i)}+1 -H_{max} \leq H(\Omega_m) \leq \sum_{i=1}^{M}{h_b(p_i)}+1
+ \sum_{i=1}^{M}{h_{b}(p_i)}+1 -H_{max} \leq H(\Omega_m) \leq \sum_{i=1}^{M}{h_{b}(p_i)}+1
 \end{equation}
 
  Knowing (\ref{eq:H1}) have,  
  \begin{equation}\label{eq:Hin4}
 \begin{matrix}
  H(U_0|U_a)&=&H(U_a|U_0)\\
-       ~  &=&h_b(p_a)
+       ~  &=&h_{b}(p_a)
 \end{matrix}
 \end{equation}
 and 
 \begin{equation}\label{eq:Hin5}
 \begin{matrix}
 H(U_0|U_aU_b) & = & H(U_a|U_0) + H(U_b|U_0) + H(U_0)- H(U_aU_b)  \\
- ~            & = & h_b(p_a) + h_b(p_b) - h_b(p_a||p_b)
+ ~            & = & h_{b}(p_a) + h_{b}(p_b) - h_{b}(p_a||p_b)
  \end{matrix}.
 \end{equation}
-The minimum value for $H_{max}=h_b(p_a) + h_b(p_b) - h_b(p_a||p_b)$ being 
+The minimum value for $H_{max}=h_{b}(p_a) + h_{b}(p_b) - h_{b}(p_a||p_b)$ being 
 $\{p_a,p_b\}$ the smallest probabilities of all $p_i, \forall i \in \{1, ..., M\}$ 
 \end{myproof}
 
@@ -538,7 +538,7 @@ $\{p_a,p_b\}$ the smallest probabilities of all $p_i, \forall i \in \{1, ..., M\
  \label{lemm:h0OmegaM_1}
  Known a system model as Fig. \ref{fig:Model} and an additional binary source $U_j$, so that $P(U_j\neq U_0|U_0)=\rho_j$, then
 \begin{equation}\label{eq:h0OmegaM_1_a}
-H(U_0|\Omega_M U_j) = h(\rho_j),
+H(U_0|\Omega_M U_j) = h_{b}(\rho_j),
 \end{equation}
 \begin{equation}\label{eq:h0OmegaM_1_a2}
 H(\Omega_M U_j) = M+1,
@@ -551,11 +551,11 @@ when $\rho_m=0.5, \forall~1 \leq m\leq M$.
  \label{proof:h0OmegaM_1}
  Knowing the Lemma \ref{lemm:H} we have that:
 \begin{equation}\label{eq:h0OmegaM_1_b}
-H(U_0|\Omega_M U_j) +H( \Omega_M U_j)=1 + h(\rho_j)+ \sum \limits_m h(\rho_m),
+H(U_0|\Omega_M U_j) +H( \Omega_M U_j)=1 + h_{b}(\rho_j)+ \sum \limits_m h_{b}(\rho_m),
 \end{equation}
 and given that $\rho_m=0.5$, then
 \begin{equation}\label{eq:h0OmegaM_1_b2}
-H(U_0|\Omega_M U_j) +H( \Omega_M U_j)=1 + M + h(\rho_j).
+H(U_0|\Omega_M U_j) +H( \Omega_M U_j)=1 + M + h_{b}(\rho_j).
 \end{equation}
 By other side, we know that $H( \Omega_M U_j)=H( \Omega_M|U_j)+H(U_j)$,
 and given that $H(U_j)=1$ and $H( \Omega_M|U_j)=H( \Omega_M)=M$;
@@ -563,7 +563,7 @@ then $H( \Omega_M U_j)=M+1$.
 
 Finally we can say that,
 \begin{equation}\label{eq:h0OmegaM_1_c}
-H(U_0|\Omega_M U_j) = h(\rho_j).
+H(U_0|\Omega_M U_j) = h_{b}(\rho_j).
 \end{equation}
 \end{myproof}
 
@@ -574,10 +574,10 @@ H(U_0|\Omega_M U_j) = h(\rho_j).
 \begin{mdframed}[style=MDFStyGrayScreen]
 \begin{mylemma}
  \label{lemm:h0OmegaM_1a}
- Known a system model as Fig. \ref{fig:Model} and defined $h(\rho) \equiv H(U_0|U_m)=H(U_m|U_0)$ and 
+ Known a system model as Fig. \ref{fig:Model} and defined $h_{b}(\rho) \equiv H(U_0|U_m)=H(U_m|U_0)$ and 
  $h_{C}(\rho,M)\equiv H(U_0|\Omega_M)$ when $\rho_m=\rho$, then
   \begin{equation}\label{eq:h0OmegaM_1a_1}
-h(\rho) \geq h_{C}(\rho,M) > h_{C}(\rho,M+1)
+h_{b}(\rho) \geq h_{C}(\rho,M) > h_{C}(\rho,M+1)
 \end{equation}
 \end{mylemma}
 \end{mdframed}
@@ -596,8 +596,139 @@ From the data processing inequality \cite{dpi}, we know
  \begin{equation}\label{eq:h0OmegaM_1a_2}
 h_{C}(\rho,M) > h_{C}(\rho,M+1).
 \end{equation}
-Finally $h_{C}(\rho,1)=H(U_0|U_1)=h(\rho)$; thus, the Eq. (\ref{eq:h0OmegaM_1a_1}), It is fulfill.
+Finally $h_{C}(\rho,1)=H(U_0|U_1)=h_{b}(\rho)$; thus, the Eq. (\ref{eq:h0OmegaM_1a_1}), It is fulfill.
 \end{myproof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{mdframed}[style=MDFStyGrayScreen]
+\begin{mylemma}
+ \label{lemm:HOmega2}
+ Known a system model as Fig. \ref{fig:Model} and defined $h_{b}(\rho) \equiv$ 
+ $-\rho log_2(\rho)$ $-(1-\rho) log_2(1-\rho)$, then
+\begin{equation}\label{eq:HOmega2_z}
+H(U_m U_n)= 1 + h_{b}(\rho_m||\rho_n),
+\end{equation}
+\begin{equation}\label{eq:HOmega2_y}
+H(U_m|U_n)=  h_{b}(\rho_m||\rho_n).
+\end{equation}
+\end{mylemma}
+\end{mdframed}
+
+\begin{myproof}\label{proof:HOmega2}
+We know that:
+\begin{equation}\label{eq:HOmega2_2}
+\begin{matrix}
+H(U_m U_n) & = &  -\sum_{a,b} p(U_m=a, U_n=b) log_2(p(U_m=a, U_n=b))\\ 
+~          & = & -p(0, 0) log_2(p(0, 0))\\ 
+~          & ~ & -p(0, 1) log_2(p(0, 1))\\
+~          & ~ & -p(1, 0) log_2(p(1, 0))\\
+~          & ~ & -p(1, 1) log_2(p(1, 1)),\\
+\end{matrix}
+\end{equation}
+Now, from the Lemma \ref{lemm:PrA}, we now that, $p(0,0)=$ 
+$p(1, 1)=$ $(1-\rho_m ||\rho_n )/2$ and
+$p(0, 1)=$ 
+$p(1, 0)=$ $(\rho_m||\rho_n)/2$, so that we can rewrite 
+Eq. (\ref{eq:HOmega2_2}) as
+\begin{equation}\label{eq:HOmega2_3}
+\begin{matrix}
+H(U_m U_n) & = & -(1-\rho_m ||\rho_n )log_2((1-\rho_m ||\rho_n )/2)\\ 
+~          & ~ & -(\rho_m||\rho_n) log_2((\rho_m||\rho_n)/2)\\
+~          & = & -(1-\rho_m ||\rho_n )log_2((1-\rho_m ||\rho_n ))\\ 
+~          & ~ & -(\rho_m||\rho_n) log_2((\rho_m||\rho_n))\\
+~          & ~ & +1,\\
+\end{matrix}
+\end{equation}
+and consequently
+\begin{equation}\label{eq:HOmega2_4}
+H(U_m U_n)= h_{b}(\rho_m||\rho_n)+1.
+\end{equation}
+By other side by the chain rule we know that:
+\begin{equation}\label{eq:HOmega2_5}
+H(U_m U_n)= 1 + H(U_m|U_n),
+\end{equation}
+then,
+\begin{equation}\label{eq:HOmega2_6}
+H(U_m|U_n)= h_{b}(\rho_m||\rho_n).
+\end{equation}
+\end{myproof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{mdframed}[style=MDFStyGrayScreen]
+\begin{mylemma}
+ \label{lemm:h0Omega2}
+ Known a system model as Fig. \ref{fig:Model} and defined $h_{b}(\rho) \equiv$ 
+ $-\rho log_2(\rho)$ $-(1-\rho) log_2(1-\rho)$ and 
+ $h_{C}(\rho,2)\equiv H(U_0|\Omega_2)$ when $\rho_m=\rho$ and $m:\{1,2\}$, then
+  \begin{equation}\label{eq:h0Omega2}
+h_{C}(\rho,2) = 2 h_{b}(\rho) - h_{b}(2\rho-2\rho^2)
+\end{equation}
+\end{mylemma}
+\end{mdframed}
+
+\begin{myproof}\label{proof:h0Omega2}
+From Lemma \ref{lemm:H}, we know that:
+\begin{equation}\label{eq:h0Omega2_1}
+h_{C}(\rho,2) = 1+ h_{b}(\rho)+ h_{b}(\rho) - (1+ H(U_1|U_2)),
+\end{equation}
+If we use the Lemma \ref{lemm:HOmega2}, we obtain:
+\begin{equation}\label{eq:h0Omega2_2}
+h_{C}(\rho,2) = 2 h_{b}(\rho) - h_{b}(2\rho-2\rho^2)
+\end{equation}
+\end{myproof}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{mdframed}[style=MDFStyGrayScreen]
+\begin{mylemma}
+ \label{lemm:Dnhrho}
+ Defined $h_{b}(\rho) \equiv$ 
+ $-\rho log_2(\rho)$ $-(1-\rho) log_2(1-\rho)$, then:
+ 
+ If $n$ is odd:
+\begin{equation}\label{eq:Dnhrho_0}
+\left. \frac{\partial^n  h_{b}(\rho)}{\partial \rho^n}\right|_{\rho=\frac{1}{2}} = 0.
+\end{equation}
+
+ If $n$ is even:
+\begin{equation}\label{eq:Dnhrho_1}
+\left. \frac{\partial^n  h_{b}(\rho)}{\partial \rho^n}\right|_{\rho=\frac{1}{2}} =-\frac{(n-2)!2^n}{ln(2)}
+\end{equation}
+\end{mylemma}
+\end{mdframed}
+
+\begin{myproof}\label{proof:Dnhrho}
+We know that:
+\begin{equation}\label{eq:ProofDnhrho_0}
+h_{b}(\rho) = -\rho log_2(\rho) -(1-\rho) log_2(1-\rho).
+\end{equation}
+Applying the first derivate, we have that,
+\begin{equation}\label{eq:ProofDnhrho_1}
+ \frac{\partial  h_{b}(\rho)}{\partial \rho}  = \frac{1}{ln(2)} \left(\frac{ln(1-\rho)}{1}-\frac{ln(\rho)}{1}\right)
+\end{equation}
+\begin{equation}\label{eq:ProofDnhrho_2}
+ \frac{\partial^2 h_{b}(\rho)}{\partial\rho^2}= \frac{1}{ln(2)} \left(\frac{-1}{(1-\rho)}+\frac{-1}{\rho}\right)
+\end{equation}
+\begin{equation}\label{eq:ProofDnhrho_3}
+ \frac{\partial^3 h_{b}(\rho)}{\partial\rho^3}= \frac{1}{ln(2)} \left(\frac{-1}{(1-\rho)^2}+\frac{+1}{\rho^2}\right)
+\end{equation}
+\begin{equation}\label{eq:ProofDnhrho_4}
+ \frac{\partial^4 h_{b}(\rho)}{\partial\rho^4}= \frac{1}{ln(2)} \left(\frac{-2}{(1-\rho)^3}+\frac{-2}{\rho^3}\right)
+\end{equation}
+\begin{equation}\label{eq:ProofDnhrho_5}
+ \frac{\partial^5 h_{b}(\rho)}{\partial\rho^5}= \frac{1}{ln(2)} \left(\frac{-3(2)}{(1-\rho)^4}+\frac{+3(2)}{\rho^4}\right)
+\end{equation}
+\begin{equation}\label{eq:ProofDnhrho_6}
+ \frac{\partial^6 h_{b}(\rho)}{\partial\rho^6}= \frac{1}{ln(2)} \left(\frac{-4(3)(2)}{(1-\rho)^5}+\frac{-4(3)(2)}{\rho^5}\right)
+\end{equation}
+\begin{equation}\label{eq:ProofDnhrho_7}
+ \frac{\partial^7 h_{b}(\rho)}{\partial\rho^7}= \frac{1}{ln(2)} \left(\frac{-5(4)(3)(2)}{(1-\rho)^6}+\frac{+5(4)(3)(2)}{\rho^6}\right)
+\end{equation}
+\end{myproof}
+
 
 
 
@@ -684,7 +815,7 @@ joint probability $P(x,y)$.
 Let e represent an occurrence of error; i.e.,  $X \neq {\tilde {X}}$, 
 with $\tilde {X}=f(Y)$ being an approximate version of $X$. Fano's inequality is
 \begin{equation}\label{eq:FanoInequality2}
- H(X|Y)\leq h(P_e)+P_e\log(|{\mathcal {X}}|-1), 
+ H(X|Y)\leq h_{b}(P_e)+P_e\log(|{\mathcal {X}}|-1), 
 \end{equation}
 where $P_e=P(X \neq {\tilde {X}})$.
 \end{mytheorem}
@@ -693,23 +824,197 @@ where $P_e=P(X \neq {\tilde {X}})$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Working}
 \label{sec:working}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{mdframed}[style=MDFStyGrayScreen]
+\begin{mylemma}
+ \label{lemm:Dnh0Omega2all}
+ Known a system model as Fig. \ref{fig:Model} and defined 
+ $h_{C}(\rho,2)\equiv H(U_0|\Omega_2)$ when $\rho_m=\rho$ and $m:\{1,2\}$, then:
+ 
+ If $n=2$,
+ \begin{equation}\label{eq:Dnh0Omega2all_0}
+\left. \frac{\partial^n  h_{C}(\rho,2)}{\partial \rho^n}\right|_{\rho=\frac{1}{2}} = 
+\frac{(n-2)! 2^n }{ln(2)}
+(-1)^{n/2}2
+\end{equation}
+ If $n>2$ is even,
+\begin{equation}\label{eq:Dnh0Omega2all_1}
+\left. \frac{\partial^n  h_{C}(\rho,2)}{\partial \rho^n}\right|_{\rho=\frac{1}{2}} = 
+\frac{(n-2)! 2^n }{ln(2)}
+(-1)^{n/2}
+\frac{4\lfloor \frac{n}{4} \rfloor  }{\left(\frac{n}{2}-1\right)}
+\end{equation}
+ 
+ If $n$ is odd,
+\begin{equation}\label{eq:Dnh0Omega2all_2}
+\left. \frac{\partial^n  h_{C}(\rho,2)}{\partial \rho^n}\right|_{\rho=\frac{1}{2}} = 0
+\end{equation}
+\end{mylemma}
+\end{mdframed}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{mdframed}[style=MDFStyGrayScreen]
+\begin{mylemma}
+ \label{lemm:Dnh0Omega2}
+ Known a system model as Fig. \ref{fig:Model} and defined $h_{b}(\rho) \equiv$ 
+ $-\rho log_2(\rho)$ $-(1-\rho) log_2(1-\rho)$ and 
+ $h_{C}(\rho,2)\equiv H(U_0|\Omega_2)$ when $\rho_m=\rho$ and $m:\{1,2\}$, then:
+ 
+ If $n$ is even,
+\begin{equation}\label{eq:Dnh0Omega2_1}
+\left. \frac{\partial^n  h_{C}(\rho,2)}{\partial \rho^n}\right|_{\rho=\frac{1}{2}} =
+\left. \frac{\partial^n  h_{b}(\rho)}{\partial \rho^n}\right|_{\rho=\frac{1}{2}} +
+\left( \prod_{i=1}^{n/2}(2i-1)\right) 2^{n}\left. \frac{\partial^{n/2}  h_{b}(\rho)}{\partial \rho^{n/2}}\right|_{\rho=\frac{1}{2}}
+\end{equation}
+\end{mylemma}
+\end{mdframed}
+
+\begin{myproof}\label{proof:Dnh0Omega2}
+From Lemma \ref{lemm:h0Omega2}, we know that:
+\begin{equation}\label{eq:ProofDnh0Omega2_0}
+h_{C}(\rho,2) = 2 h_{b}(\rho) - h_{b}(2\rho-2\rho^2);
+\end{equation}
+then, considering $\frac{\partial^n  h_{C}(\rho,2)}{\partial \rho^n } \equiv D^n h_{C}(\rho,2)$
+and $f(\rho)=-h_{b}(2\rho-2\rho^2)$, we have,
+\begin{equation}\label{eq:ProofDnh0Omega2_1}
+D   f(\rho) =  - (2-4\rho) D h_{b}(2\rho-2\rho^2),
+\end{equation}
+\begin{equation}\label{eq:ProofDnh0Omega2_2}
+\begin{matrix}
+D^2 f(\rho) &=& + (4) D h_{b}(2\rho-2\rho^2) \\
+           ~&~&- (2-4\rho)^2 D^2 h_{b}(2\rho-2\rho^2) ,
+\end{matrix}
+\end{equation}
+\begin{equation}\label{eq:ProofDnh0Omega2_3}
+\begin{matrix}
+D^3 f(\rho) &=& +(3) (4)(2-4\rho) D^2 h_{b}(2\rho-2\rho^2)\\
+           ~&~& - (2-4\rho)^3 D^3 h_{b}(2\rho-2\rho^2),
+\end{matrix}
+\end{equation}
+\begin{equation}\label{eq:ProofDnh0Omega2_4}
+\begin{matrix}
+D^4 f(\rho) &=& -(3)(4)(4) D^2 h_{b}(2\rho-2\rho^2) \\
+           ~&~& +(2)(3)(4)(2-4\rho)^2 D^3 h_{b}(2\rho-2\rho^2)  \\
+           ~&~&-(2-4\rho)^4 D^4 h_{b}(2\rho-2\rho^2),
+\end{matrix}
+\end{equation}
+\begin{equation}\label{eq:ProofDnh0Omega2_5}
+\begin{matrix}
+D^5 f(\rho) &=& -5(3)(4)(4)(2-4\rho) D^3 h_{b}(2\rho-2\rho^2) \\
+           ~&~& +(10)(4)(2-4\rho)^3 D^4 h_{b}(2\rho-2\rho^2) \\
+           ~&~&-(2-4\rho)^5 D^5 h_{b}(2\rho-2\rho^2),
+\end{matrix}
+\end{equation}
+\begin{equation}\label{eq:ProofDnh0Omega2_6}
+\begin{matrix}
+D^6 f(\rho) &=& +5(3)(4)(4)(4) D^3 h_{b}(2\rho-2\rho^2) \\
+           ~&~& -(15)(3)(4)(4)(2-4\rho)^2 D^4 h_{b}(2\rho-2\rho^2) \\
+           ~&~& +(15)(4)(2-4\rho)^4 D^5 h_{b}(2\rho-2\rho^2) \\
+           ~&~& -(2-4\rho)^6 D^6 h_{b}(2\rho-2\rho^2),\\
+\end{matrix}
+\end{equation}
+\begin{equation}\label{eq:ProofDnh0Omega2_7}
+\begin{matrix}
+D^7 f(\rho) &=& +7(5)(3)(4)(4)(4)(2-4\rho) D^4 h_{b}(2\rho-2\rho^2) \\
+           ~&~& -7(5)(3)(4)(4)(2-4\rho)^3 D^5 h_{b}(2\rho-2\rho^2) \\
+           ~&~& +7(3)(4)(2-4\rho)^5 D^6 h_{b}(2\rho-2\rho^2) \\
+           ~&~& -(2-4\rho)^7 D^7 h_{b}(2\rho-2\rho^2),\\
+\end{matrix}
+\end{equation}
+
+\begin{equation}\label{eq:ProofDnh0Omega2_8}
+\begin{matrix}
+D^8 f(\rho) &=& -7(5)(3)(4)(4)(4)(4) D^4 h_{b}(2\rho-2\rho^2) \\
+           ~&~& +7(5)(3)(4)(4)(4)(4)(2-4\rho)^2 D^5 h_{b}(2\rho-2\rho^2) \\
+           ~&~& -7(2)(5)(3)(4)(4)(2-4\rho)^4 D^6 h_{b}(2\rho-2\rho^2) \\
+           ~&~& +7(4)(4)(2-4\rho)^6 D^7 h_{b}(2\rho-2\rho^2)\\
+           ~&~& -(2-4\rho)^8 D^8 h_{b}(2\rho-2\rho^2),\\
+\end{matrix}
+\end{equation}
+\end{myproof}
 
 
-\subsection{Experimentalmente corroborado $H(U_0|\Omega_M)$ (conjetura de la potencia $h_b$)}
-\label{subsec:h0OmegaM_2}
-
+\subsection{Experimentalmente corroborado $H(U_0|\Omega_M)$ }
+\label{subsec:h0OmegaM_C2}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{mdframed}[style=MDFStyGrayScreen]
+\begin{conjecture}
+ \label{lemm:hbapprox1}
+Given a $h_{b}(\rho) =$ $-\rho log_2(\rho)$ $-(1-\rho) log_2(1-\rho)$;
+and considering $0.5\geq \rho \geq 0$, we can affirm that,
+\begin{equation}\label{eq:hbapprox1_1}
+\sqrt{1-(1-2\rho)^2}\geq h_{b}(\rho)
+\end{equation}
+and consequently,
+\begin{equation}\label{eq:hbapprox1_2}
+\rho \geq  \frac{1-\sqrt{1-h_{b}(\rho)^2}}{2}
+\end{equation}
+\end{conjecture}
+\end{mdframed}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{mdframed}[style=MDFStyGrayScreen]
 \begin{conjecture}
- \label{lemm:h0OmegaM_2}
- Known a system model as Fig. \ref{fig:Model} and $h_{C}(\rho,m)\equiv H(U_0|\Omega_m)$ when $\rho_i=\rho$, then
-\begin{equation}\label{eq:Hconjecture1}
-h_{C}(\rho,m)  \stackrel{m \rightarrow \infty }{=} h(\rho)^{f(\rho)~m+g(\rho)}
+Given a $h_{b}(\rho)=-\rho log_2(\rho)-(1-\rho) log_2(1-\rho)$,
+and using the Taylor series over $h_{b}(\rho)=1-\frac{1}{2ln(2)}\sum_{n=1}^{\infty}\frac{(1-2\rho)^{2n}}{n(2n-1)}$;
+and considering $0.5\geq \rho \geq 0$, we can affirm that,
+ \label{lemm:hbapprox2}
+\begin{equation}\label{eq:hbapprox2_1}
+ 1-\frac{(1-2\rho)^{2}}{2ln(2)}\geq h_{b}(\rho) 
+\end{equation}
+and consequently,
+\begin{equation}\label{eq:hbapprox2_2}
+\rho \geq  \frac{1-\sqrt{2 ln(2)(1-h_{b}(\rho))}}{2}
 \end{equation}
 \end{conjecture}
 \end{mdframed}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{mdframed}[style=MDFStyGrayScreen]
+\begin{conjecture}
+\label{lemm:hbapprox2b}
+Given a $h_{b}(\rho)=-\rho log_2(\rho)-(1-\rho) log_2(1-\rho)$,
+and considering $0.5\geq \rho \geq 0$, we can affirm that,
+\begin{equation}\label{eq:hbapprox2b_1}
+h_{b}(\rho)\geq 1-(1-2\rho)^{n}  
+\end{equation}
+to $n=\{0, 1, 2\}$ and consequently,
+\begin{equation}\label{eq:hbapprox2b_2}
+\frac{1}{2}\geq \frac{h_{b}(\rho)}{2}\geq \frac{1-\sqrt{1-h_{b}(\rho)}}{2}\geq  \rho
+\end{equation}
+\end{conjecture}
+\end{mdframed}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{mdframed}[style=MDFStyGrayScreen]
+\begin{conjecture}[conjetura de la potencia $h$]
+ \label{lemm:h0OmegaM_2}
+ Known a system model as Fig. \ref{fig:Model} and $h_{C}(\rho,M)\equiv H(U_0|\Omega_M)$ when $\rho_m=\rho$, then
+\begin{equation}\label{eq:Hconjecture1}
+h_{C}(\rho,M)  \stackrel{M \rightarrow \infty }{\approx} h_{b}(\rho)^{f(\rho)~M+g(\rho)}
+\end{equation}
+\end{conjecture}
+\end{mdframed}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{mdframed}[style=MDFStyGrayScreen]
+\begin{conjecture}[conjetura del minimo con potencia $h$]
+ \label{lemm:h0OmegaM_3}
+ Known a system model as Fig. \ref{fig:Model} and $h_{C}(\rho,M)\equiv H(U_0|\Omega_M)$ when $\rho_m=\rho$, then
+\begin{equation}\label{eq:Hconjecture3}
+h_{C}(\rho,M)  > h_{b}(\rho)^M
+\end{equation}
+\end{conjecture}
+\end{mdframed}
+
 
 \subsection{Hypothesis sin testar $H(U_0|\Omega_M)$}
 \label{subsec:h0OmegaM}
@@ -721,11 +1026,11 @@ h_{C}(\rho,m)  \stackrel{m \rightarrow \infty }{=} h(\rho)^{f(\rho)~m+g(\rho)}
 experimentally that
 \begin{equation}
  \begin{matrix}
- H(U_0|\Omega_M)= & (-1)^{1+1} & \sum \limits_{a_1}         h_b(p_{a_1}) \\
- ~                & (-1)^{2+1} & \sum \limits_{a_1 a_2}     h_b(p_{a_1}||p_{a_2}) \\ 
- ~                & (-1)^{3+1}  & \sum \limits_{a_1 a_2 a_3} h_b(p_{a_1}||p_{a_2}||p_{a_3}) \\ 
+ H(U_0|\Omega_M)= & (-1)^{1+1} & \sum \limits_{a_1}         h_{b}(p_{a_1}) \\
+ ~                & (-1)^{2+1} & \sum \limits_{a_1 a_2}     h_{b}(p_{a_1}||p_{a_2}) \\ 
+ ~                & (-1)^{3+1}  & \sum \limits_{a_1 a_2 a_3} h_{b}(p_{a_1}||p_{a_2}||p_{a_3}) \\ 
  ~                & ~ & \vdots \\
- ~                & (-1)^{M+1}  & \sum \limits_{a_1 ... a_M} h_b(p_{a_1}|| ... ||p_{a_M}) 
+ ~                & (-1)^{M+1}  & \sum \limits_{a_1 ... a_M} h_{b}(p_{a_1}|| ... ||p_{a_M}) 
  \end{matrix}
 \end{equation}
 
@@ -734,8 +1039,8 @@ experimentally that
 Them
 \end{myproof}
 
-\section{Hipotesis fracasadas $H(U_0|\Omega_M)$ }
-\label{subsec:h0OmegaM_2}
+\section{Hipotesis cuestionables $H(U_0|\Omega_M)$ }
+\label{subsec:h0OmegaM_B2}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -758,7 +1063,7 @@ H \rightarrow h_c(\rho,2)
 \end{equation}
 
 Later
-\begin{equation}\label{eq:HconjectureHc2_3}
+\begin{equation}\label{eq:HconjectureHc2_4}
 \rho_{:} \leftarrow order\_ascending(\rho_{:})
 \end{equation}
 

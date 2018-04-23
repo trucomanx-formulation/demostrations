@@ -1,0 +1,9 @@
+h:-p*log(p)/log(2)-(1-p)*log(1-p)/log(2);
+
+
+M:2;
+hM:diff(h,p,M);
+hMe:ev(hM,p=1/2)/(factorial(M-2)*2^(M));
+
+
+
