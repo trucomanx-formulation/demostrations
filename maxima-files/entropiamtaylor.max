@@ -1,0 +1,9 @@
+f:((p^k)*(1-p)^(M-k)+((1-p)^k)*(p)^(M-k))/2$
+h:f*log(f)/log(2)$
+
+DN:diff(h,p,2)$
+EN:ev(DN,p=1/2)*log(2)*2^(M)$
+A:factor(expand(EN));
+
+S:sum(binomial (M, k)*A,k,0,M);
+

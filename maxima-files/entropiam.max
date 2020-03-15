@@ -4,5 +4,5 @@ h:sum(binomial (M, k)*f,k,0,M)$
 
 N:10$
 DN:factor(diff(h,p,N))$
-DNe:factor(ev(DN,p=1/2)*log(2)*(N/2-1)/(factorial(N-2)*2^(N)*(-1)^(N/2)));
+EN:ev(DN,p=1/2)*log(2)*(N/2-1)/(factorial(N-2)*2^(N)*(-1)^(N/2));
 
